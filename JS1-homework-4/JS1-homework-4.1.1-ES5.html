@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS1-homework-4.1.1</title>
+</head>
+
+<body>
+
+	<script>
+		'use strict';
+		// Задание 4.1.1
+		// ES5 
+		function Product(name, price) {
+			this.name = name;
+			this.price = price;
+		}
+
+		Product.prototype.make25PercentDiscount = function (discount) {
+			this.price = this.price - (this.price / 100 * discount);
+		};
+
+		let obj_1 = new Product('scooter', 150);
+		let obj_2 = new Product('bike', 500);
+		
+		obj_1.make25PercentDiscount(25);
+		obj_2.make25PercentDiscount(25);
+
+		console.log(obj_1);
+		console.log(obj_2);
+	</script>
+</body>
+
+</html>
